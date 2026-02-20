@@ -2,8 +2,7 @@
 <html lang='en'>
 <head>
   <meta charset='UTF-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>Flex Basis - Shrink - Grow</title>
   <style>
     body {
       margin: 0;
@@ -17,6 +16,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
     }
     .blocks {
       display: flex;
@@ -33,14 +33,21 @@
       align-items: center;
     }
     .block1 {
-      flex-basis: 400px;
+      /*flex-basis: 200px;*/
+      flex-shrink: 2; /* al variar el tamaño de la pantalla se encoge x2*/
+      flex-grow: 3;
     }
     .block2 {
-      flex-basis: 100px;
+      /*flex-basis: 100px;*/
+      flex-shrink: 1;
+      flex-grow: 2;
     }
     .block3 {
       flex-basis: 200px;
+      flex-grow: 3;
     }
+
+  
   </style>
 </head>
 <body>
@@ -50,7 +57,7 @@
       <div class="block block2">2</div>
       <div class="block block3">3</div>
     </div>
+
   </div>
 </body>
-
 </html>
