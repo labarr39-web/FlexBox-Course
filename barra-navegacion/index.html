@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegación</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<style>
+
+    body {
+        margin: 0px;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        background-color: cornflowerblue;
+        height: 3rem;
+        margin: 0px;
+
+    }
+
+    .contenedor-marca {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .icon-bars  i {
+        display: inline-block;
+        color: wheat;
+        background-color: cornflowerblue;
+        margin-left: 10px;
+        margin-right: 10px;
+        justify-content: center;
+        border: 1px solid transparent;
+        border-radius: 3px;
+    }
+
+    .icon-bars i:hover {
+        color: cornflowerblue;
+        background-color: wheat;
+    }
+
+    .icon-bars i:active {
+        color: cornflowerblue;
+        background-color: wheat;
+        border: 1px solid black;
+    }
+
+    .marca {
+        color: wheat;
+        text-decoration: none;
+        padding: 1rem;
+        justify-content: initial;
+
+    }
+
+    .contenedor-links {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        height: 100%;
+
+    }
+    
+    .links-wrap {
+        display: flex;
+        flex:initial
+    }
+
+    .links-izquierda {
+        justify-content: flex-start;
+        flex: initial;
+        margin: 0px;
+        height: 100%;
+    }
+
+    .links-derecha {
+        justify-content: flex-end;
+        flex: initial;
+    }
+
+    .navbar-desplegable{
+        display: flex;
+        flex-direction: column;
+        background-color: cornflowerblue;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link {
+        color: wheat;
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .link:hover, .link:active {
+        background-color: wheat;
+        color: cornflowerblue;
+    }
+
+    .link:active {
+        color: darkblue;
+    }
+
+    @media (max-width: 48em) {
+        .contenedor-links {
+            display: none;
+        }
+        .contenedor-marca, .link, .icon-bars i {
+            background-color: rgb(64, 96, 155);
+        }
+        .marca {
+            background-color: cornflowerblue;
+        }
+    }
+
+    @media (min-width: 48em) {
+        .contenedor-links {
+            display: flex;
+        }
+        .contenedor-marca, .link, .icon-bars i {
+            background-color: cornflowerblue;
+        }
+        .navbar-desplegable {
+            display: none;
+        }
+    }
+
+
+
+
+</style>
+</head>
+
+
+<body>
+    <div class="navbar">
+        <div class="contenedor-marca">
+            <div class="icon-bars"><i class="fa-solid fa-bars" ></i></div>
+            <a href="#" class="marca">Este soy yo</a>
+        </div>
+        <div class="contenedor-links">
+            <div class="links-izquierda links-wrap">
+                <a href="#" class="link">Link 1</a>
+                <a href="#" class="link">Link 2</a>
+        </div>
+            <div class="links-derecha links-wrap">
+                <a href="#" class="link">Link 3</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar-desplegable">
+            <a href="#" class="link link1">Link 1</a>
+            <a href="#" class="link link2">Link 2</a>
+            <a href="#" class="link link3">Link 3</a>
+    </div>
+
+
+</body>
+</html>
